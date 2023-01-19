@@ -62,17 +62,17 @@ public class AutoTest {
 
 
 //      Раздел "Контактная информация"
-        driver.findElement(By.xpath("//div[@class='container__row js-formset-row'][@data-num='0']//div[@class='input input_full lk-cv-block__input input_straight-bottom-right input_straight-top-right input_no-border-right lk-cv-block__input_fake lk-cv-block__input_select-fake js-custom-select-presentation']")).click();
+        driver.findElement(By.cssSelector("input[name='contact-0-service'] ~ .lk-cv-block__input")).click();
         driver.findElement(By.xpath("//div[@data-num='0']//button[@data-value='skype']")).click();
         clearAndEnter(By.id("id_contact-0-value"), "oksant");
-        driver.findElement(By.xpath("//button[@type='button'] [@class='lk-cv-block__action lk-cv-block__action_md-no-spacing js-formset-add js-lk-cv-custom-select-add']")).click();
-        driver.findElement(By.xpath("//div[@class='container__row js-formset-row'][@data-num='1']//div[@class='input input_full lk-cv-block__input input_straight-bottom-right input_straight-top-right input_no-border-right lk-cv-block__input_fake lk-cv-block__input_select-fake js-custom-select-presentation']")).click();
+        driver.findElement(By.cssSelector("div[data-prefix='contact']> button[class*='add']")).click();
+        driver.findElement(By.cssSelector("input[name='contact-1-service'] ~ .lk-cv-block__input")).click();
         driver.findElement(By.xpath("//div[@data-num='1']//button[@data-value='viber']")).click();
         clearAndEnter(By.id("id_contact-1-value"), "89877877777");
 
 //      Раздел "Другое"
         driver.findElement(By.id("id_gender")).click();
-        driver.findElement(By.xpath("//div[@class='select select_full']//option[@value='f']")).click();
+        driver.findElement(By.cssSelector("select[name='gender']>option[value='f']")).click();
         clearAndEnter(By.id("id_company"), "ИТ1");
         clearAndEnter(By.id("id_work"), "Test Lead");
 
